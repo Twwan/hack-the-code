@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Политика конфиденциальности - Hack the Code</title>
+    <title>Privacy Policy - Hack the Code</title>
     <style>
         * {
             margin: 0;
@@ -46,6 +46,33 @@
             font-size: 1.1em;
             opacity: 0.9;
             font-weight: 300;
+        }
+
+        .lang-switch {
+            display: inline-flex;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 999px;
+            padding: 4px;
+            gap: 4px;
+        }
+
+        .lang-switch button {
+            border: none;
+            background: transparent;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-size: 0.95em;
+            font-family: inherit;
+            transition: background 0.2s ease;
+        }
+
+        .lang-switch button.active {
+            background: white;
+            color: #2c3e50;
+            font-weight: 600;
         }
         
         .content {
@@ -112,6 +139,14 @@
             font-size: 0.9em;
             border-top: 1px solid #e9ecef;
         }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
         
         @media (max-width: 768px) {
             body {
@@ -139,66 +174,148 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Политика конфиденциальности</h1>
+            <h1 id="page-title">Privacy Policy</h1>
             <div class="subtitle">Hack the Code</div>
+            <div class="lang-switch">
+                <button type="button" id="btn-en" class="active" onclick="setLang('en')">English</button>
+                <button type="button" id="btn-ru" onclick="setLang('ru')">Русский</button>
+            </div>
         </div>
         
         <div class="content">
-            <div class="update-date">Последнее обновление: 21 ноября 2025 г.</div>
-            
-            <div class="section">
-                <h2>Общая информация</h2>
-                <p><strong>Разработчик:</strong> Twwan</p>
-                <p><strong>Контактный email:</strong> twwan@inbox.ru</p>
-                <p>Эта Политика конфиденциальности применяется к мобильному приложению <strong>Hack the Code</strong>, разработанному и распространяемому через магазины Google Play и AppStore.</p>
-            </div>
-            
-            <div class="section">
-                <h2>1. Сбор и использование данных</h2>
-                <div class="highlight">
-                    <strong>Приложение Hack the Code НЕ СОБИРАЕТ и НЕ ОБРАБАТЫВАЕТ</strong> какие-либо личные или персональные данные пользователей.
+            <div id="content-en" class="lang-content active">
+                <div class="update-date">Last updated: November 21, 2025</div>
+                
+                <div class="section">
+                    <h2>General Information</h2>
+                    <p><strong>Developer:</strong> Twwan</p>
+                    <p><strong>Contact email:</strong> twwan@inbox.ru</p>
+                    <p>This Privacy Policy applies to the mobile application <strong>Hack the Code</strong>, developed and distributed through Google Play and the App Store.</p>
                 </div>
-                <p>Под личными данными понимается любая информация, которая может быть использована для идентификации личности, такая как: имя, адрес электронной почты, номер телефона, данные местоположения, информация об устройстве и т.д.</p>
-                <p>Поскольку мы не собираем данные, мы их никоим образом не используем, не передаем и не продаем третьим сторонам.</p>
+                
+                <div class="section">
+                    <h2>1. Data Collection and Use</h2>
+                    <div class="highlight">
+                        <strong>The Hack the Code app DOES NOT COLLECT or PROCESS</strong> any personal or personally identifiable user data.
+                    </div>
+                    <p>Personal data means any information that can be used to identify a person, such as: name, email address, phone number, location data, device information, etc.</p>
+                    <p>Since we do not collect data, we do not use, transfer, or sell it to third parties in any way.</p>
+                </div>
+                
+                <div class="section">
+                    <h2>2. Gameplay Data</h2>
+                    <p>The app may store local data on your device that is necessary for the game to function (for example, progress, best score, game settings).</p>
+                    <p>This data is stored <strong>only on your device</strong> and is not transferred to us or third parties. You can delete this data by uninstalling the app from your device.</p>
+                </div>
+                
+                <div class="section">
+                    <h2>3. Third-Party Services</h2>
+                    <p>The app <strong>does not use</strong> third-party services (such as analytics, advertising, or social networks) that could collect user data.</p>
+                </div>
+                
+                <div class="section">
+                    <h2>4. Security</h2>
+                    <p>Since we do not collect or transfer your data, there are no issues related to the security of its storage and transmission.</p>
+                </div>
+                
+                <div class="section">
+                    <h2>5. Consent to the Privacy Policy</h2>
+                    <p>By using our App, you agree to the terms of this Privacy Policy. If you do not agree with this policy, please do not use the App.</p>
+                </div>
+                
+                <div class="section">
+                    <h2>6. Changes to the Privacy Policy</h2>
+                    <p>We reserve the right to make changes to this Privacy Policy at any time. We will notify you of any changes by posting the updated Privacy Policy on this page.</p>
+                    <p>These changes take effect immediately after they are published.</p>
+                </div>
+                
+                <div class="contact-info">
+                    <h2>7. Contact Us</h2>
+                    <p>If you have any questions or suggestions regarding this Privacy Policy, feel free to contact us:</p>
+                    <p><strong>Email:</strong> twwan@inbox.ru</p>
+                </div>
             </div>
-            
-            <div class="section">
-                <h2>2. Данные игрового процесса</h2>
-                <p>Приложение может сохранять на вашем устройстве локальные данные, необходимые для функционирования игры (например, сохранение прогресса, лучший счет, настройки игры).</p>
-                <p>Эти данные хранятся <strong>только на вашем устройстве</strong> и не передаются нам или третьим лицам. Вы можете удалить эти данные, удалив приложение с вашего устройства.</p>
-            </div>
-            
-            <div class="section">
-                <h2>3. Сторонние сервисы</h2>
-                <p>Приложение <strong>не использует</strong> сторонние сервисы (такие как аналитика, реклама или социальные сети), которые могли бы собирать данные о пользователях.</p>
-            </div>
-            
-            <div class="section">
-                <h2>4. Безопасность</h2>
-                <p>Поскольку мы не собираем и не передаем ваши данные, вопросы, связанные с безопасностью их хранения и передачи, отсутствуют.</p>
-            </div>
-            
-            <div class="section">
-                <h2>5. Согласие с политикой конфиденциальности</h2>
-                <p>Используя наше Приложение, вы соглашаетесь с условиями данной Политики конфиденциальности. Если вы не согласны с этой политикой, пожалуйста, не используйте Приложение.</p>
-            </div>
-            
-            <div class="section">
-                <h2>6. Изменения в политике конфиденциальности</h2>
-                <p>Мы оставляем за собой право вносить изменения в эту Политику конфиденциальности в любое время. О любых изменениях мы уведомим вас, разместив обновленную Политику конфиденциальности на этой странице.</p>
-                <p>Эти изменения вступают в силу сразу после их публикации.</p>
-            </div>
-            
-            <div class="contact-info">
-                <h2>7. Связь с нами</h2>
-                <p>Если у вас есть какие-либо вопросы или предложения относительно этой Политики конфиденциальности, не стесняйтесь обращаться к нам:</p>
-                <p><strong>Электронная почта:</strong> twwan@inbox.ru</p>
+
+            <div id="content-ru" class="lang-content">
+                <div class="update-date">Последнее обновление: 21 ноября 2025 г.</div>
+                
+                <div class="section">
+                    <h2>Общая информация</h2>
+                    <p><strong>Разработчик:</strong> Twwan</p>
+                    <p><strong>Контактный email:</strong> twwan@inbox.ru</p>
+                    <p>Эта Политика конфиденциальности применяется к мобильному приложению <strong>Hack the Code</strong>, разработанному и распространяемому через магазины Google Play и AppStore.</p>
+                </div>
+                
+                <div class="section">
+                    <h2>1. Сбор и использование данных</h2>
+                    <div class="highlight">
+                        <strong>Приложение Hack the Code НЕ СОБИРАЕТ и НЕ ОБРАБАТЫВАЕТ</strong> какие-либо личные или персональные данные пользователей.
+                    </div>
+                    <p>Под личными данными понимается любая информация, которая может быть использована для идентификации личности, такая как: имя, адрес электронной почты, номер телефона, данные местоположения, информация об устройстве и т.д.</p>
+                    <p>Поскольку мы не собираем данные, мы их никоим образом не используем, не передаем и не продаем третьим сторонам.</p>
+                </div>
+                
+                <div class="section">
+                    <h2>2. Данные игрового процесса</h2>
+                    <p>Приложение может сохранять на вашем устройстве локальные данные, необходимые для функционирования игры (например, сохранение прогресса, лучший счет, настройки игры).</p>
+                    <p>Эти данные хранятся <strong>только на вашем устройстве</strong> и не передаются нам или третьим лицам. Вы можете удалить эти данные, удалив приложение с вашего устройства.</p>
+                </div>
+                
+                <div class="section">
+                    <h2>3. Сторонние сервисы</h2>
+                    <p>Приложение <strong>не использует</strong> сторонние сервисы (такие как аналитика, реклама или социальные сети), которые могли бы собирать данные о пользователях.</p>
+                </div>
+                
+                <div class="section">
+                    <h2>4. Безопасность</h2>
+                    <p>Поскольку мы не собираем и не передаем ваши данные, вопросы, связанные с безопасностью их хранения и передачи, отсутствуют.</p>
+                </div>
+                
+                <div class="section">
+                    <h2>5. Согласие с политикой конфиденциальности</h2>
+                    <p>Используя наше Приложение, вы соглашаетесь с условиями данной Политики конфиденциальности. Если вы не согласны с этой политикой, пожалуйста, не используйте Приложение.</p>
+                </div>
+                
+                <div class="section">
+                    <h2>6. Изменения в политике конфиденциальности</h2>
+                    <p>Мы оставляем за собой право вносить изменения в эту Политику конфиденциальности в любое время. О любых изменениях мы уведомим вас, разместив обновленную Политику конфиденциальности на этой странице.</p>
+                    <p>Эти изменения вступают в силу сразу после их публикации.</p>
+                </div>
+                
+                <div class="contact-info">
+                    <h2>7. Связь с нами</h2>
+                    <p>Если у вас есть какие-либо вопросы или предложения относительно этой Политики конфиденциальности, не стесняйтесь обращаться к нам:</p>
+                    <p><strong>Электронная почта:</strong> twwan@inbox.ru</p>
+                </div>
             </div>
         </div>
         
-        <div class="footer">
-            &copy; 2026 Hack the Code. Все права защищены.
+        <div class="footer" id="footer-text">
+            &copy; 2026 Hack the Code. All rights reserved.
         </div>
     </div>
+
+    <script>
+        const titles = {
+            en: 'Privacy Policy',
+            ru: 'Политика конфиденциальности'
+        };
+
+        const footers = {
+            en: '&copy; 2026 Hack the Code. All rights reserved.',
+            ru: '&copy; 2026 Hack the Code. Все права защищены.'
+        };
+
+        function setLang(lang) {
+            document.documentElement.lang = lang;
+            document.getElementById('page-title').textContent = titles[lang];
+            document.getElementById('footer-text').innerHTML = footers[lang];
+            document.getElementById('content-en').classList.toggle('active', lang === 'en');
+            document.getElementById('content-ru').classList.toggle('active', lang === 'ru');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
+            document.title = titles[lang] + ' - Hack the Code';
+        }
+    </script>
 </body>
 </html>
